@@ -71,9 +71,9 @@ For production, use PostgreSQL by setting `DATABASE_URL`, restrict `FRONTEND_URL
 ## Deployment
 
 1. Create a Git repository and commit the source after checking `.env` is ignored.
-2. Deploy `frontend/` to Vercel with `VITE_API_URL` pointing to the backend URL.
+2. Deploy `frontend/` to Vercel and configure `VITE_API_URL` to the deployed backend URL. A variable-name template is provided in [frontend/.env.example](./frontend/.env.example).
 3. Deploy the `backend/` service to Render using [render.yaml](./render.yaml), or build [backend/Dockerfile](./backend/Dockerfile) on another container host.
-4. Configure `JWT_SECRET`, `DATABASE_URL`, and `FRONTEND_URL` in the backend host.
+4. Configure `JWT_SECRET`, `DATABASE_URL`, `FRONTEND_URL`, `ENVIRONMENT`, `AI_PROVIDER`, and optional `AI_API_KEY` in the backend host. Use a PostgreSQL URL such as `postgresql+psycopg://USER:PASSWORD@HOST:5432/DATABASE` for production.
 5. Run the test suite and frontend build before publishing.
 
 ## Limitations and responsible use

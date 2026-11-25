@@ -11,3 +11,11 @@ services:
         sync: false
       - key: DATABASE_URL
         sync: false
+      - key: ENVIRONMENT
+        value: production
+      - key: AI_PROVIDER
+        sync: false
+      - key: AI_API_KEY
+        sync: false
+      - key: MAX_UPLOAD_BYTES
+        value: "10485760"

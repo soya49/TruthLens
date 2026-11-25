@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: truthlens-api
+    env: docker
+    rootDir: backend
+    healthCheckPath: /health
+    envVars:
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: DATABASE_URL
+        sync: false
